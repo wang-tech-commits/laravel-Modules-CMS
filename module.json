@@ -1,13 +1,6 @@
 {
-    "name": "laravel-Modules-CMS",
+    "name": "Cms",
     "alias": "cms",
-    "type": "laravel-module",
-    "authors": [
-        {
-            "name": "Mr.wang",
-            "email": "15124532157@163.com"
-        }
-    ],
     "description": "",
     "keywords": [],
     "priority": 0,

@@ -1,10 +1,11 @@
 {
-    "name": "nwidart/cms",
+    "name": "wang-tech-commits/cms",
     "description": "",
+    "type": "laravel-module",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "Mr.wang",
+            "email": "15124532157@163.com"
         }
     ],
     "extra": {
