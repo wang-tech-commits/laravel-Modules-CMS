@@ -3,9 +3,15 @@
 namespace Modules\Cms\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Modules\Cms\Console\InstallCommand;
 
 class CmsServiceProvider extends ServiceProvider
 {
+
+    protected $commands = [
+        InstallCommand::class,
+    ];
+
     /**
      * @var string $moduleName
      */
@@ -23,6 +29,7 @@ class CmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->registerCommands();
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
@@ -52,6 +59,17 @@ class CmsServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
         );
+    }
+
+    /**
+     * 注册命令
+     * @Author:<Mr.Wang>
+     * @Date:2021-04-09
+     * @return [type] [description]
+     */
+    protected function registerCommands()
+    {
+        $this->commands($this->commands);
     }
 
     /**
